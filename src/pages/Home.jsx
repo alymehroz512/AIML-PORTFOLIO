@@ -29,11 +29,10 @@ const Home = () => {
             />
           </h1>
 
-          <p className="hero-subheading">
-            Building Intelligent Systems with AI
-          </p>
+          <p className="hero-subheading">Building Intelligent Systems with AI</p>
 
-          <p className="hero-subheading-small">
+          {/* Full paragraph for desktops and tablets */}
+          <p className="hero-subheading-small full-text">
             I’m an AI/ML Engineer passionate about leveraging data and algorithms
             to build smart, human-centered systems. With expertise in Python,
             TensorFlow, PyTorch, and data science tools, I develop machine
@@ -42,6 +41,13 @@ const Home = () => {
             processing. I enjoy transforming raw data into intelligent insights
             and creating seamless integrations between AI models and
             production-ready applications.
+          </p>
+
+          {/* Slightly longer short paragraph for mobile screens */}
+          <p className="hero-subheading-small short-text">
+            I’m an AI/ML Engineer passionate about building intelligent and
+            human-centered systems using data-driven algorithms. I focus on
+            turning ideas into smart, efficient, and scalable AI solutions.
           </p>
 
           <div className="hero-buttons">

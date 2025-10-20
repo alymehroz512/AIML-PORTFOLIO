@@ -83,6 +83,15 @@
   text-align: justify;
 }
 
+/* ✅ Long vs Short text handling */
+.full-text {
+  display: block;
+}
+
+.short-text {
+  display: none;
+}
+
 /* 🎯 Buttons */
 .hero-buttons {
   display: flex;
@@ -213,7 +222,7 @@
   }
 }
 
-/* Phones */
+/* Phones (≤425px) */
 @media (max-width: 425px) {
   .hero-heading {
     font-size: 32px;
@@ -222,7 +231,9 @@
     font-size: 15px;
   }
   .hero-subheading-small {
-    font-size: 13px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
   }
   .hero-content {
     padding: 28px 16px;
@@ -238,9 +249,19 @@
     width: 16px;
     height: 16px;
   }
+
+  /* ✅ Show short text, hide long one */
+  .full-text {
+    display: none;
+  }
+  .short-text {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto 30px;
+  }
 }
 
-/* Very small devices (320px–375px) */
+/* Very small (≤375px) */
 @media (max-width: 375px) {
   .hero-heading {
     font-size: 28px;
@@ -249,7 +270,7 @@
     font-size: 14px;
   }
   .hero-subheading-small {
-    font-size: 12px;
+    font-size: 13px;
   }
   .hero-button {
     font-size: 12px;
@@ -259,9 +280,17 @@
     width: 14px;
     height: 14px;
   }
+
+  .full-text {
+    display: none;
+  }
+  .short-text {
+    display: block;
+    max-width: 92%;
+  }
 }
 
-/* Ultra-small screens (≤320px) */
+/* Ultra-small (≤320px) */
 @media (max-width: 320px) {
   .hero-heading {
     font-size: 24px;
@@ -270,7 +299,7 @@
     font-size: 13px;
   }
   .hero-subheading-small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .hero-button {
     font-size: 11px;
@@ -279,5 +308,13 @@
   .icon {
     width: 12px;
     height: 12px;
+  }
+
+  .full-text {
+    display: none;
+  }
+  .short-text {
+    display: block;
+    max-width: 94%;
   }
 }
