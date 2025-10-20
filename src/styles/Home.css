@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --neon: #07fbff;
+  --text: #ffffff;
+}
+
+/* 🌌 Hero Section */
+.hero-section {
+  background-image: url("../assets/HomeHero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8vh 0;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.inner-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🧠 Hero Content */
+.hero-content {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🎯 Hero Heading */
+.hero-heading {
+  color: var(--neon);
+  font-size: 65px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  white-space: nowrap;
+  min-height: 80px;
+  margin-top: 20px;
+}
+
+/* ✨ Subheadings */
+.hero-subheading {
+  color: var(--text);
+  font-size: 30px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-subheading-small {
+  color: var(--text);
+  font-size: 20px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 🎯 Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  cursor: pointer;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-button::before,
+.hero-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: width 0.22s ease, height 0.22s ease;
+}
+
+.hero-button::before {
+  top: -3px;
+  left: -3px;
+  border-top: 2px solid var(--neon);
+  border-left: 2px solid var(--neon);
+}
+
+.hero-button::after {
+  bottom: -3px;
+  right: -3px;
+  border-bottom: 2px solid var(--neon);
+  border-right: 2px solid var(--neon);
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 6px 16px rgba(7, 251, 255, 0.25),
+              0 1px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.hero-button:hover::before,
+.hero-button:hover::after,
+.hero-button:focus-visible::before,
+.hero-button:focus-visible::after {
+  width: 102.5%;
+  height: 110%;
+}
+
+.hero-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(7, 251, 255, 0.2),
+              0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 🧠 Heroicons */
+.icon {
+  width: 22px;
+  height: 22px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-button:hover .icon,
+.hero-button:focus-visible .icon {
+  transform: translateX(4px);
+}
+
+/* 📱 Responsive Scaling */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 55px;
+    min-height: 70px;
+  }
+  .hero-subheading {
+    font-size: 24px;
+  }
+  .hero-subheading-small {
+    font-size: 16px;
+  }
+  .hero-button {
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 42px;
+    white-space: normal;
+    margin-top: 50px;
+  }
+  .hero-subheading {
+    font-size: 18px;
+  }
+  .hero-subheading-small {
+    font-size: 15px;
+    text-align: center;
+  }
+  .hero-content {
+    padding: 40px 20px;
+  }
+  .hero-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Phones */
+@media (max-width: 425px) {
+  .hero-heading {
+    font-size: 32px;
+  }
+  .hero-subheading {
+    font-size: 15px;
+  }
+  .hero-subheading-small {
+    font-size: 13px;
+  }
+  .hero-content {
+    padding: 28px 16px;
+  }
+  .hero-buttons {
+    gap: 1rem;
+  }
+  .hero-button {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Very small devices (320px–375px) */
+@media (max-width: 375px) {
+  .hero-heading {
+    font-size: 28px;
+  }
+  .hero-subheading {
+    font-size: 14px;
+  }
+  .hero-subheading-small {
+    font-size: 12px;
+  }
+  .hero-button {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Ultra-small screens (≤320px) */
+@media (max-width: 320px) {
+  .hero-heading {
+    font-size: 24px;
+  }
+  .hero-subheading {
+    font-size: 13px;
+  }
+  .hero-subheading-small {
+    font-size: 11px;
+  }
+  .hero-button {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .icon {
+    width: 12px;
+    height: 12px;
+  }
+}
