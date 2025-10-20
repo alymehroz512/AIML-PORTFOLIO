@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import CustomNavbar from './components/CustomNavbar';
 import Home from './pages/Home';
-
+import About from './pages/About';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -21,7 +21,7 @@ function AppRoutes() {
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
         {/* <Route path="/skills" element={<Skills />} /> */}
         {/* <Route path="/experinece" element={<Experinece />} /> */}
         {/* <Route path="/projects" element={<Projects />} /> */}
