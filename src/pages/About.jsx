@@ -6,19 +6,27 @@ import {
   BeakerIcon,
   ChartPieIcon,
 } from "@heroicons/react/24/outline";
+import { useSelector } from "react-redux";
 import "../styles/About.css";
 
+const iconMap = {
+  CpuChipIcon: CpuChipIcon,
+  ChartBarSquareIcon: ChartBarSquareIcon,
+  BeakerIcon: BeakerIcon,
+  ChartPieIcon: ChartPieIcon,
+};
+
 const About = () => {
+  const { hero, intro, sections } = useSelector((state) => state.about);
+
   return (
     <>
       {/* 🔹 Hero Section */}
       <Container fluid className="about-hero-section">
         <div className="about-inner-container">
           <Col md={12} className="about-content">
-            <h5 className="about-subheading">About Me</h5>
-            <p className="about-description">
-              Building intelligent, human-centered systems.
-            </p>
+            <h5 className="about-subheading">{hero.title}</h5>
+            <p className="about-description">{hero.tagline}</p>
           </Col>
         </div>
       </Container>
@@ -28,73 +36,28 @@ const About = () => {
         <Container>
           {/* ➕ Intro */}
           <div className="accordion-intro">
-            <h2 className="text-uppercase">What Drives My Work</h2>
-            <p className="accordion-intro-text">
-              My focus lies in creating intelligent systems that learn, adapt,
-              and evolve — merging innovation with real-world problem-solving.
-            </p>
+            <h2 className="text-uppercase">{intro.heading}</h2>
+            <p className="accordion-intro-text">{intro.description}</p>
           </div>
 
-          {/* 🔹 Pulse Animated Divider */}
           <hr className="pulse-line" />
 
           {/* 🔹 Accordion */}
           <Accordion defaultActiveKey="0" className="about-accordion">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>
-                <CpuChipIcon className="accordion-icon" />
-                Artificial Intelligence
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="accordion-body-text">
-                  Designing intelligent systems that perceive, reason, and make
-                  data-driven decisions. AI bridges human-like intelligence with
-                  computational precision.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>
-                <ChartBarSquareIcon className="accordion-icon" />
-                Machine Learning
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="accordion-body-text">
-                  Leveraging algorithms that learn from data to predict,
-                  classify, and improve automatically over time — forming the
-                  core of automation and predictive analytics.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>
-                <BeakerIcon className="accordion-icon" />
-                Deep Learning
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="accordion-body-text">
-                  Using neural networks to model complex data patterns, powering
-                  breakthroughs in computer vision and natural language
-                  processing.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="3">
-              <Accordion.Header>
-                <ChartPieIcon className="accordion-icon" />
-                Data Science
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="accordion-body-text">
-                  Extracting actionable insights from data using Python,
-                  TensorFlow, and PyTorch — driving smarter decisions through
-                  analytics and visualization.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
+            {sections.map((item) => {
+              const IconComponent = iconMap[item.icon];
+              return (
+                <Accordion.Item eventKey={item.id.toString()} key={item.id}>
+                  <Accordion.Header>
+                    <IconComponent className="accordion-icon" />
+                    {item.title}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <p className="accordion-body-text">{item.description}</p>
+                  </Accordion.Body>
+                </Accordion.Item>
+              );
+            })}
           </Accordion>
         </Container>
       </section>
