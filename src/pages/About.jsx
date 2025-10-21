@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Col, Accordion } from "react-bootstrap";
-import { Helmet } from "react-helmet-async";
 import {
   CpuChipIcon,
   ChartBarSquareIcon,
@@ -12,18 +11,6 @@ import "../styles/About.css";
 const About = () => {
   return (
     <>
-      <Helmet>
-        <title>About | AI & ML Engineer</title>
-        <meta
-          name="description"
-          content="About section highlighting passion for building intelligent, data-driven AI systems."
-        />
-        <meta
-          name="keywords"
-          content="AI Engineer, Machine Learning, Deep Learning, Data Science, Artificial Intelligence"
-        />
-      </Helmet>
-
       {/* 🔹 Hero Section */}
       <Container fluid className="about-hero-section">
         <div className="about-inner-container">
