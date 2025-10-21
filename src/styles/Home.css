@@ -68,7 +68,7 @@
 
 /* ✨ Subheadings */
 .hero-subheading {
-  color: var(--text);
+  color: #ffffff;
   font-size: 30px;
   margin-bottom: 25px;
   letter-spacing: 1px;
@@ -76,7 +76,7 @@
 }
 
 .hero-subheading-small {
-  color: var(--text);
+  color: #ffffff;
   font-size: 20px;
   margin-bottom: 35px;
   line-height: 1.6;

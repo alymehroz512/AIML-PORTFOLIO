@@ -1,3 +1,4 @@
+// src/pages/About.jsx
 import React from "react";
 import { Container, Col, Accordion } from "react-bootstrap";
 import {
@@ -34,7 +35,6 @@ const About = () => {
       {/* 🔹 Accordion Section */}
       <section className="about-accordion-section">
         <Container>
-          {/* ➕ Intro */}
           <div className="accordion-intro">
             <h2 className="text-uppercase">{intro.heading}</h2>
             <p className="accordion-intro-text">{intro.description}</p>
@@ -42,7 +42,6 @@ const About = () => {
 
           <hr className="pulse-line" />
 
-          {/* 🔹 Accordion */}
           <Accordion defaultActiveKey="0" className="about-accordion">
             {sections.map((item) => {
               const IconComponent = iconMap[item.icon];
@@ -53,7 +52,14 @@ const About = () => {
                     {item.title}
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p className="accordion-body-text">{item.description}</p>
+                    <div className="accordion-body-animate">
+                      <p className="accordion-body-text">{item.description}</p>
+                      <ul className="accordion-list">
+                        {item.highlights.map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </Accordion.Body>
                 </Accordion.Item>
               );

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import CustomNavbar from './components/CustomNavbar';
 import Home from './pages/Home';
 import About from './pages/About';
+import Skill from './pages/Skill';
+import Experience from './pages/Experience';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -22,8 +24,8 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/skills" element={<Skills />} /> */}
-        {/* <Route path="/experinece" element={<Experinece />} /> */}
+        <Route path="/skills" element={<Skill />} />
+        <Route path="/experience" element={<Experience />} />
         {/* <Route path="/projects" element={<Projects />} /> */}
         {/* <Route path="/devtools" element={<DevTools />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}

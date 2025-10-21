@@ -1,12 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit';
-import navReducer from './navSlice';
-import homeReducer from './homeSlice';
-import aboutReducer from './aboutSlice'; // ✅ added
+import { configureStore } from "@reduxjs/toolkit";
+import navReducer from "./navSlice";
+import homeReducer from "./homeSlice";
+import aboutReducer from "./aboutSlice";
+import skillsReducer from "./skillsSlice";
+import experienceReducer from "./experienceSlice";
 
 export const store = configureStore({
   reducer: {
     nav: navReducer,
     home: homeReducer,
-    about: aboutReducer, // ✅ added
+    about: aboutReducer,
+    skills: skillsReducer,
+    experience: experienceReducer,
   },
 });

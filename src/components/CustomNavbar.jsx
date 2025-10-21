@@ -25,13 +25,13 @@ const CustomNavbar = () => {
       </Navbar.Brand>
 
       {/* Mobile Toggle Icon */}
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-1">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-0">
         {expanded ? <HiX color="white" size={24} /> : <HiMenuAlt3 color="white" size={24} />}
       </Navbar.Toggle>
 
       {/* Navbar Links */}
       <Navbar.Collapse id="basic-navbar-nav" className="ms-3">
-        <Nav className="me-auto mt-1">
+        <Nav className="ms-auto mt-1 mx-5">
           {/* Static Page Links */}
           <Nav.Link
             as={NavLink}
