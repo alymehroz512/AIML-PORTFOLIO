@@ -77,7 +77,7 @@ const initialState = {
     },
     {
       title: "UI/UX Design",
-      icon: "Cog6ToothIcon",
+      icon: "PencilSquareIcon",
       description:
         "Responsive Design, Bootstrap, Material-UI, Tailwind CSS, CSS3, SASS/SCSS — crafting visually appealing and user-centered interfaces.",
     },

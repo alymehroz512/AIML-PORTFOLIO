@@ -12,7 +12,7 @@ import {
   BoltIcon,
   UserGroupIcon,
   GlobeAltIcon,
-  Cog6ToothIcon,
+  PencilSquareIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 import { useSelector } from "react-redux";
@@ -30,7 +30,7 @@ const iconMap = {
   BoltIcon: BoltIcon,
   UserGroupIcon: UserGroupIcon,
   GlobeAltIcon: GlobeAltIcon,
-  Cog6ToothIcon: Cog6ToothIcon,
+  PencilSquareIcon: PencilSquareIcon,
   ShieldCheckIcon: ShieldCheckIcon,
 };
 
