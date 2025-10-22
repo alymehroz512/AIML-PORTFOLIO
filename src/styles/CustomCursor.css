@@ -1,0 +1,32 @@
+.cursor {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #07FBFF;
+  mix-blend-mode: hard-light;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  top: -30px;
+  left: -30px;
+  transition: opacity 0.4s;
+}
+
+.cursor-f {
+  position: fixed;
+  border-radius: 50%;
+  border: 1px dashed #07FBFF;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cursor.clicked .cursor-f {
+  background-color: rgba(7, 251, 255, 0.12);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

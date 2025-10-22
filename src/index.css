@@ -1,0 +1,4 @@
+/* Hide default cursor on the whole page */
+html, body {
+  cursor: none;
+}

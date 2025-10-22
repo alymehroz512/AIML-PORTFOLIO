@@ -7,6 +7,7 @@ import About from './pages/About';
 import Skill from './pages/Skill';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
+import CustomCursor from './components/CustomCursor';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -22,6 +23,7 @@ function AppRoutes() {
     <>
       <ScrollToTop />
       <CustomNavbar />
+      <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
