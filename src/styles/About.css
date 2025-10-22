@@ -149,6 +149,7 @@
   gap: 14px;
   transition: all 0.3s ease;
   border-radius: 0 !important;
+  cursor: none;
 }
 
 /* Remove border-radius on first & last */

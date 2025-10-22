@@ -137,7 +137,7 @@
   max-width: 350px;
   transition: all 0.3s ease;
   text-align: left;
-  cursor: pointer;
+  cursor: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
