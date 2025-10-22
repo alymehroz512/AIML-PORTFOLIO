@@ -8,6 +8,8 @@ import Skill from './pages/Skill';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import CustomCursor from './components/CustomCursor';
+import DevTools from './pages/Dev';
+import Contact from './pages/Contact'
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -30,8 +32,8 @@ function AppRoutes() {
         <Route path="/skills" element={<Skill />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
-        {/* <Route path="/devtools" element={<DevTools />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/devtools" element={<DevTools />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );

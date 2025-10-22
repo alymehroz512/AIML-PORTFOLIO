@@ -8,7 +8,7 @@ const initialState = {
     description:
       "A curated selection of projects demonstrating full-stack development, AI integration, and scalable software architecture.",
   },
-  projects: [], // no cards
+  
 };
 
 const projectsSlice = createSlice({
