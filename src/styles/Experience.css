@@ -153,9 +153,9 @@
   left: 0;
   background-color: var(--primary);
   color: white;
-  font-size: 15px;
+  font-size: 16px; /* same as skill title scaling */
   font-weight: 600;
-  padding: 8px 20px;
+  padding: 10px 20px; /* same scale as skill card */
   border-bottom-right-radius: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -178,7 +178,7 @@
 }
 
 .experience-title-vertical {
-  font-size: 24px;
+  font-size: 24px; /* same as skill card title */
   font-weight: 600;
   color: var(--primary);
   margin: 0;
@@ -190,7 +190,7 @@
 }
 
 .experience-date {
-  font-size: 15px;
+  font-size: 16px; /* same as skill card description */
   color: #555;
   margin-top: 5px;
 }
@@ -201,7 +201,7 @@
 }
 
 .experience-list li {
-  font-size: 16px;
+  font-size: 1.1rem; /* same as skill card description */
   line-height: 1.6;
   color: var(--secondary);
   margin-bottom: 8px;
@@ -244,11 +244,15 @@
   }
 
   .experience-title-vertical {
-    font-size: 20px;
+    font-size: 20px; /* responsive like skills */
+  }
+
+  .experience-date {
+    font-size: 13px; /* responsive like skills description */
   }
 
   .experience-list li {
-    font-size: 14px;
+    font-size: 13px; /* responsive like skills description */
   }
 
   .experience-ribbon-flat {
@@ -277,6 +281,18 @@
 
   .pulse-line {
     width: 100%;
+  }
+
+  .experience-title-vertical {
+    font-size: 18px; /* mobile scaling */
+  }
+
+  .experience-date {
+    font-size: 12px; /* mobile scaling */
+  }
+
+  .experience-list li {
+    font-size: 12px; /* mobile scaling */
   }
 
   .experience-ribbon-flat {
