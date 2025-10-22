@@ -8,6 +8,23 @@ const initialState = {
     description:
       "Whether you’re looking to discuss a project, explore a partnership, or just say hello — I’d love to hear from you.",
   },
+  contactCards: [
+    {
+      title: "Address",
+      value: "123 Innovation Street, San Francisco, CA 94107",
+      icon: "MapPinIcon",
+    },
+    {
+      title: "Email",
+      value: "hello@yourdomain.com",
+      icon: "EnvelopeIcon",
+    },
+    {
+      title: "Phone",
+      value: "+1 (555) 123-4567",
+      icon: "PhoneIcon",
+    },
+  ],
 };
 
 const contactSlice = createSlice({

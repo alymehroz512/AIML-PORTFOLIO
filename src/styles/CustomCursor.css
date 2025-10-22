@@ -15,7 +15,7 @@
 .cursor-f {
   position: fixed;
   border-radius: 50%;
-  border: 1px dashed #07FBFF;
+  border: 1px solid #07FBFF;
   width: 30px;
   height: 30px;
   pointer-events: none;
