@@ -156,7 +156,6 @@
   font-size: 16px; /* same as skill title scaling */
   font-weight: 600;
   padding: 10px 20px; /* same scale as skill card */
-  border-bottom-right-radius: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   box-shadow: 0px 3px 6px rgba(35, 71, 86, 0.3);
