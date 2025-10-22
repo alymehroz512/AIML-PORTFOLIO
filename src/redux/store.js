@@ -4,6 +4,7 @@ import homeReducer from "./homeSlice";
 import aboutReducer from "./aboutSlice";
 import skillsReducer from "./skillsSlice";
 import experienceReducer from "./experienceSlice";
+import projectsReducer from "./projectsSlice"; 
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     about: aboutReducer,
     skills: skillsReducer,
     experience: experienceReducer,
+    projects: projectsReducer, 
   },
 });

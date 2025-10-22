@@ -29,9 +29,10 @@
   border: none;
 }
 
-/* Logo */
+/* Logo - Default Desktop Size */
 .logo {
-  height: 40px;
+  height: 35px; /* Desktop height */
+  width: auto;
   cursor: pointer;
 }
 
@@ -45,5 +46,17 @@
   .nav-link-custom {
     display: block;
     text-align: start;
+  }
+
+  /* Reduce Logo on Tablets & Mobile */
+  .logo {
+    height: 28px; /* Smaller logo */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra small screens (mobile phones) */
+  .logo {
+    height: 24px; /* Even smaller logo for phones */
   }
 }

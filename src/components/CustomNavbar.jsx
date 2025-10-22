@@ -31,68 +31,26 @@ const CustomNavbar = () => {
 
       {/* Navbar Links */}
       <Navbar.Collapse id="basic-navbar-nav" className="ms-3">
-        <Nav className="ms-auto mt-1 mx-5">
-          {/* Static Page Links */}
-          <Nav.Link
-            as={NavLink}
-            to="/"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+        <Nav className="ms-auto mt-1 mx-3">
+          <Nav.Link as={NavLink} to="/" onClick={handleNavClick} className="text-white nav-link-custom">
             Home
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/about"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/about" onClick={handleNavClick} className="text-white nav-link-custom">
             About
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/skills"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/skills" onClick={handleNavClick} className="text-white nav-link-custom">
             Skills
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/experience"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/experience" onClick={handleNavClick} className="text-white nav-link-custom">
             Experience
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/projects"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/projects" onClick={handleNavClick} className="text-white nav-link-custom">
             Projects
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/devtools"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/devtools" onClick={handleNavClick} className="text-white nav-link-custom">
             DevTools
           </Nav.Link>
-
-          <Nav.Link
-            as={NavLink}
-            to="/contact"
-            onClick={handleNavClick}
-            className="text-white nav-link-custom"
-          >
+          <Nav.Link as={NavLink} to="/contact" onClick={handleNavClick} className="text-white nav-link-custom">
             Contact
           </Nav.Link>
         </Nav>

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   hero: {
     title: "Professional Experience",
-    tagline: "Creating change through groundbreaking technology",
+    tagline: "Empowering growth through smart technology",
     heading: "Experience Timeline",
     description:
       "A journey through diverse roles and responsibilities, building scalable solutions, mentoring teams, and shaping AI-driven strategies.",

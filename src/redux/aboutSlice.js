@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   hero: {
     title: "About Me",
-    tagline: "Empowering lives through intelligent innovation.",
+    tagline: "Empowering lives through intelligent innovation",
   },
   intro: {
     heading: "What Drives My Work",
