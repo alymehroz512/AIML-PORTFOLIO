@@ -34,7 +34,7 @@ const Experience = () => {
                 <Card className="experience-card-vertical">
                   {/* 🎗 Ribbon (Flat on X-Axis) */}
                   <div className="experience-ribbon-flat">
-                    PROFESSIONAL EXPERIENCE NO. {index + 1}
+                    PROFESSIONAL EXPERIENCE NO {index + 1}
                   </div>
 
                   <div className="experience-card-body-vertical">

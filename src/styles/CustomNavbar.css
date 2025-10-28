@@ -33,7 +33,6 @@
 .logo {
   height: 35px; /* Desktop height */
   width: auto;
-  cursor: pointer;
 }
 
 /* Responsive Fixes */

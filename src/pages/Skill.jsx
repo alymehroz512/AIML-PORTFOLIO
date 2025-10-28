@@ -64,7 +64,8 @@ const Skill = () => {
               const IconComponent = iconMap[skill.icon];
               return (
                 <Col
-                  md={4}
+                  md={12}
+                  lg={4}
                   sm={6}
                   xs={12}
                   key={index}
