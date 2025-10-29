@@ -9,7 +9,6 @@ import {
   Alert,
 } from "react-bootstrap";
 import {
-  MapPinIcon,
   EnvelopeIcon,
   PhoneIcon,
   PaperAirplaneIcon,
@@ -21,12 +20,10 @@ const Contact = () => {
   const { hero, contactCards } = useSelector((state) => state.contact);
 
   const iconMap = {
-    MapPinIcon: MapPinIcon,
     EnvelopeIcon: EnvelopeIcon,
     PhoneIcon: PhoneIcon,
   };
 
-  // 🧠 Form state and alert handling
   const [message, setMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -42,7 +39,7 @@ const Contact = () => {
 
   return (
     <>
-      {/* 🌌 Hero Section */}
+      {/* Hero Section */}
       <Container fluid className="contact-hero-section">
         <div className="contact-inner-container">
           <Col md={12} className="contact-content">
@@ -52,17 +49,16 @@ const Contact = () => {
         </div>
       </Container>
 
-      {/* 📨 Contact Intro Section */}
+      {/* Contact Intro + Cards + Form */}
       <section className="contact-card-section">
         <Container>
           <div className="contact-intro">
             <h2 className="text-uppercase">{hero.heading}</h2>
             <p className="contact-intro-text">{hero.description}</p>
           </div>
-
           <hr className="pulse-line" />
 
-          {/* 📇 Contact Info Cards */}
+          {/* Contact Info Cards */}
           <Row className="justify-content-center mb-5">
             {contactCards.map((card, index) => {
               const IconComponent = iconMap[card.icon];
@@ -97,27 +93,16 @@ const Contact = () => {
             })}
           </Row>
 
-          {/* 🧭 Contact Form Section with Map Overlay */}
-          <Row className="justify-content-center contact-form-row">
-            <Col md={10} className="contact-map-col mt-5">
-              <iframe
-                title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086709328562!2d-122.40086772438444!3d37.78984261235595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064e0f9f7e3%3A0xf60ef5c2e6a1c41f!2s123%20Innovation%20St%2C%20San%20Francisco%2C%20CA%2094107!5e0!3m2!1sen!2sus!4v1695583421667!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: "none" }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </Col>
-            <Col md={12} className="contact-form-col">
+          {/* Full-Width Contact Form */}
+          <Row className="justify-content-center">
+            <Col md={10} lg={12} className="contact-form-col-full">
               <div className="contact-form-container">
-                <h3 className="contact-form-heading mt-5 mb-5 p-3">
+                <h3 className="contact-form-heading">
                   Whether you have a project in mind or just want to connect,
                   I'm all ears! Fill out the form below to start the
                   conversation
                 </h3>
-                <Form className="p-3" style={{marginTop: '-50px'}}>
+                <Form className="p-3">
                   <Row>
                     <Col md={6}>
                       <Form.Floating className="mb-3">
@@ -155,7 +140,7 @@ const Contact = () => {
                       as="textarea"
                       placeholder="Type your message here..."
                       id="message"
-                      style={{ height: "220px" }} // Reduced height
+                      style={{ height: "220px" }}
                       maxLength={1500}
                       value={message}
                       onChange={handleMessageChange}
@@ -167,21 +152,24 @@ const Contact = () => {
                     </div>
                   </Form.Floating>
 
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    className="send-message-btn text-uppercase"
-                    style={{cursor: 'none'}}
-                  >
-                    Send Message
-                    <PaperAirplaneIcon className="send-icon" />
-                  </Button>
+                  {/* Send Button - Left Aligned */}
+                  <div className="d-flex justify-content-start">
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      className="send-message-btn text-uppercase"
+                      style={{ cursor: "none" }}
+                    >
+                      Send Message
+                      <PaperAirplaneIcon className="send-icon ms-2" />
+                    </Button>
+                  </div>
                 </Form>
               </div>
             </Col>
           </Row>
 
-          {/* ⚠️ Notification */}
+          {/* Alert */}
           {showAlert && (
             <Alert
               variant="warning"

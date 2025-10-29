@@ -10,11 +10,6 @@ const initialState = {
   },
   contactCards: [
     {
-      title: "Address",
-      value: "123 Innovation Street, San Francisco, CA 94107",
-      icon: "MapPinIcon",
-    },
-    {
       title: "Email",
       value: "hello@yourdomain.com",
       icon: "EnvelopeIcon",
