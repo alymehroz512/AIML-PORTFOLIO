@@ -8,7 +8,12 @@ const initialState = {
     description:
       "An extensive collection of technical proficiencies and tools used to build intelligent, scalable, and production-grade AI systems.",
   },
+  groupLabels: {
+    core: "Core Experties",
+    secondary: "Secondary & Supporting Experties",
+  },
   skills: [
+    // === CORE AI/ML SKILLS (12) ===
     {
       title: "Programming",
       icon: "CpuChipIcon",
@@ -70,6 +75,20 @@ const initialState = {
         "Git, Docker, Kubernetes, Terraform, Prometheus, Grafana, Linux — managing infrastructure and ensuring system reliability through automation.",
     },
     {
+      title: "Computer Vision",
+      icon: "BeakerIcon",
+      description:
+        "OpenCV, YOLO, MediaPipe, Albumentations, Image Segmentation, Object Detection — building real-time vision systems and pipelines.",
+    },
+    {
+      title: "Natural Language Processing",
+      icon: "ChartBarSquareIcon",
+      description:
+        "spaCy, NLTK, Gensim, Sentence Transformers, RAG, LLMs, Fine-tuning — advanced text processing, embeddings, and generative AI.",
+    },
+
+    // === SECONDARY & SUPPORTING SKILLS (12) ===
+    {
       title: "Frontend Frameworks & Libraries",
       icon: "UserGroupIcon",
       description:
@@ -98,6 +117,48 @@ const initialState = {
       icon: "ShieldCheckIcon",
       description:
         "OAuth2, JWT, OpenID Connect, SSL/TLS, OWASP Security Practices, RBAC, CORS — implementing secure authentication and protecting data privacy.",
+    },
+    {
+      title: "Version Control & Collaboration",
+      icon: "CommandLineIcon",
+      description:
+        "Git, GitHub, GitLab, Bitbucket, PR workflows, code reviews — expert in collaborative development and version control best practices.",
+    },
+    {
+      title: "Containerization & Orchestration",
+      icon: "ServerIcon",
+      description:
+        "Docker, Docker Compose, Kubernetes, Helm, CI/CD pipelines — containerizing applications and orchestrating at scale.",
+    },
+    {
+      title: "Monitoring & Logging",
+      icon: "ChartBarIcon",
+      description:
+        "Prometheus, Grafana, ELK Stack, Loki, Sentry — real-time monitoring, alerting, and log aggregation for system health.",
+    },
+    {
+      title: "Performance Optimization",
+      icon: "BoltIcon",
+      description:
+        "Profiling, caching strategies, database indexing, CDN, lazy loading — optimizing speed and scalability across stack.",
+    },
+    {
+      title: "Agile & Project Management",
+      icon: "UserGroupIcon",
+      description:
+        "Scrum, Kanban, Jira, Trello, Confluence — leading cross-functional teams with agile methodologies and clear documentation.",
+    },
+    {
+      title: "Data Engineering",
+      icon: "ServerIcon",
+      description:
+        "ETL pipelines, Apache NiFi, dbt, Airbyte, Great Expectations — designing robust, fault-tolerant data workflows.",
+    },
+    {
+      title: "AI Ethics & Governance",
+      icon: "ShieldCheckIcon",
+      description:
+        "Bias detection, fairness auditing, model explainability, data privacy, GDPR, AI safety — ensuring responsible AI deployment.",
     },
   ],
 };

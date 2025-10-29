@@ -109,7 +109,6 @@
   width: 65%;
   margin: 50px auto;
   background-color: var(--primary);
-  border-radius: 10px;
   animation: pulse 1.8s infinite ease-in-out;
 }
 

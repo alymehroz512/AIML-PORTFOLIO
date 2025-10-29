@@ -109,7 +109,6 @@
   width: 65%;
   margin: 50px auto;
   background-color: var(--primary);
-  border-radius: 10px;
   animation: pulse 1.8s infinite ease-in-out;
 }
 
@@ -288,5 +287,54 @@
 
   .skills-intro-text {
     font-size: 0.9rem;
+  }
+}
+
+/* Skills Group - Left Aligned Headings */
+.skills-group-heading.left-aligned {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: left;
+  margin: 60px 0 35px;
+  letter-spacing: 1.2px;
+  position: relative;
+  display: block;
+  padding-left: 5px;
+}
+
+.skills-group-heading.left-aligned::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .skills-group-heading.left-aligned {
+    font-size: 1.8rem;
+    margin: 50px 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-group-heading.left-aligned {
+    font-size: 1.6rem;
+    margin: 45px 0 25px;
+  }
+  .skills-group-heading.left-aligned::after {
+    width: 60px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-group-heading.left-aligned {
+    font-size: 1.4rem;
+    padding-left: 0;
   }
 }
