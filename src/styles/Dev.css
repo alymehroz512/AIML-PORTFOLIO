@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* ===============================
-   🌈 VARIABLES
+   VARIABLES
 =============================== */
 :root {
   --primary: #234756;
@@ -13,7 +13,7 @@
 }
 
 /* ===============================
-   🌌 HERO SECTION
+   HERO SECTION
 =============================== */
 .dev-hero-section {
   background-image: url("../assets/DevHero.jpeg");
@@ -80,7 +80,7 @@
 }
 
 /* ===============================
-   🖥 DEV INTRO SECTION
+   DEV INTRO SECTION
 =============================== */
 .dev-card-section {
   background-color: #ffffff;
@@ -110,7 +110,7 @@
 }
 
 /* ===============================
-   🔹 PULSE DIVIDER
+   PULSE DIVIDER
 =============================== */
 .pulse-line {
   border: none;
@@ -118,7 +118,6 @@
   width: 65%;
   margin: 50px auto;
   background-color: var(--primary);
-
   animation: pulse 1.8s infinite ease-in-out;
 }
 
@@ -138,7 +137,7 @@
 }
 
 /* ===============================
-   📊 DEV TABLE
+   DEV TABLE
 =============================== */
 .dev-table-container {
   margin-top: 60px;
@@ -151,7 +150,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* ✅ Header styling (no bottom border) */
+/* Header styling (no bottom border) */
 .dev-table thead tr th {
   background-color: var(--primary);
   color: white;
@@ -164,13 +163,11 @@
   border-bottom: none;
 }
 
-/* ✅ Add border-right only for 1st, 2nd, and 3rd columns */
+/* Only 1st and 2nd columns get right border (Version removed) */
 .dev-table th:nth-child(1),
 .dev-table td:nth-child(1),
 .dev-table th:nth-child(2),
-.dev-table td:nth-child(2),
-.dev-table th:nth-child(3),
-.dev-table td:nth-child(3) {
+.dev-table td:nth-child(2) {
   border-right: 1px solid #d0d0d0;
 }
 
@@ -189,7 +186,20 @@
 }
 
 /* ===============================
-   📘 LEARN ICON BUTTON
+   EXPERIENCE BADGE
+=============================== */
+.experience-badge {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white; 
+  font-size: 1rem;
+  padding: 6px 12px;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* ===============================
+   LEARN ICON BUTTON (kept for future use or other pages)
 =============================== */
 .learn-icon-button {
   display: inline-flex;
@@ -213,7 +223,7 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* ✨ Sleek hover: lift + glow */
+/* Sleek hover: lift + glow */
 .learn-icon-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(35, 71, 86, 0.4);
@@ -232,7 +242,7 @@
 }
 
 /* ===============================
-   📱 RESPONSIVE
+   RESPONSIVE
 =============================== */
 @media (max-width: 1024px) {
   .dev-description {
@@ -267,9 +277,10 @@
     font-size: 0.95rem;
     padding: 8px;
   }
-  .learn-icon-button {
-    width: 80px;
-    height: 34px;
+  .experience-badge {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    min-width: 55px;
   }
 }
 
@@ -295,12 +306,9 @@
     font-size: 0.85rem;
     padding: 6px;
   }
-  .learn-icon-button {
-    width: 70px;
-    height: 32px;
-  }
-  .learn-icon-button .learn-icon {
-    width: 18px;
-    height: 18px;
+  .experience-badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    min-width: 50px;
   }
 }
