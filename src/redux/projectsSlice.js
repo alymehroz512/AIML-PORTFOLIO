@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   hero: {
     title: "My Projects",
-    tagline: "Innovating through intelligent design and future-ready technologies",
+    tagline: "Pioneering innovation through practical software design",
     heading: "Project Showcase",
     description:
       "A selection of my top projects combining AI, automation, 3D simulation, and secure web technology — all developed with modern frameworks and advanced system architecture.",

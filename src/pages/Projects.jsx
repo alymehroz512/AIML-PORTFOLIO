@@ -117,9 +117,7 @@ const Projects = () => {
           </div>
           <hr className="pulse-line" />
         </Container>
-      </section>
-
-      {/* ---------- PROJECTS DISPLAY ---------- */}
+              {/* ---------- PROJECTS DISPLAY ---------- */}
       <section className="project-display-section">
         <Container fluid>
           {projects.map((project, idx) => {
@@ -162,6 +160,9 @@ const Projects = () => {
           })}
         </Container>
       </section>
+      </section>
+
+
     </>
   );
 };
