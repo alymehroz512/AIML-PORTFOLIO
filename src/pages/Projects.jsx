@@ -1,14 +1,19 @@
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "../styles/Projects.css";
-
 /* ---------- PROJECT IMAGES ---------- */
 import Project1 from "../assets/Project1.jpg";
 import Project2 from "../assets/Project2.jpg";
 import Project3 from "../assets/Project3.jpg";
 import Project4 from "../assets/Project4.jpg";
-import Project5 from "../assets/Project5.jpg"; // Add your CyberPunk image here
-
+import Project5 from "../assets/Project5.jpg";
+import Project6 from "../assets/Project6.jpg";
+import Project7 from "../assets/Project7.jpg";
+import Project8 from "../assets/Project8.jpg";
+import Project9 from "../assets/Project9.jpg";
+import Project10 from "../assets/Project10.jpg"; // Add your Health Services image here
+import Project11 from "../assets/Project11.jpg"; // AI & ML Project Image
+import Project12 from "../assets/Project12.jpg"; // New AI Project Image
 /* ---------- ICON IMPORTS ---------- */
 import {
   FaReact,
@@ -41,10 +46,8 @@ import {
 import { TbBrandThreejs } from "react-icons/tb";
 import { VscVscode, VscAzure } from "react-icons/vsc";
 import { MdAnimation } from "react-icons/md";
-
 const Projects = () => {
   const { hero, projects } = useSelector((state) => state.projects);
-
   /* ---------- ICON MAP ---------- */
   const toolIcons = {
     Python: <FaPython size={30} color="#3776AB" />,
@@ -78,7 +81,6 @@ const Projects = () => {
     Blockchain: <SiBlockchaindotcom size={30} color="#29B6F6" />,
     JWT: <FaLock size={30} color="#FFB300" />,
   };
-
   const Placeholder = (
     <div
       style={{
@@ -90,12 +92,10 @@ const Projects = () => {
       }}
     />
   );
-
   const getImage = (idx) => {
-    const images = [Project1, Project2, Project3, Project4, Project5];
+    const images = [Project1, Project2, Project3, Project4, Project5, Project6, Project7, Project8, Project9, Project10, Project11, Project12];
     return images[idx] || Project1;
   };
-
   return (
     <>
       {/* ---------- HERO SECTION ---------- */}
@@ -107,7 +107,6 @@ const Projects = () => {
           </div>
         </div>
       </Container>
-
       {/* ---------- INTRO SECTION ---------- */}
       <section className="projects-card-section">
         <Container>
@@ -161,10 +160,7 @@ const Projects = () => {
         </Container>
       </section>
       </section>
-
-
     </>
   );
 };
-
 export default Projects;
