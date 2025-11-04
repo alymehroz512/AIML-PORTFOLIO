@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Footer.css";
 import Logo from "../assets/Logo.svg";
-import FooterBg from "../assets/FooterBackground.jpg"; // replace with your image
+import FooterBg from "../assets/FooterBackground.jpg";
 import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
@@ -25,51 +25,44 @@ const Footer = () => {
         <div className="footer-overlay"></div>
 
         <div className="footer-content">
-          <Container>
-            <Row className="align-items-start">
-              <Col xs={12}>
-                {/* Logo + Description */}
-                <div className="logo-section">
-                  <img src={Logo} alt="Logo" className="footer-logo" />
-                  <p className="footer-desc">
-                    Exploring creativity and innovation through technology &
-                    Building impactful digital experiences.
-                  </p>
-                </div>
+          <Container className="text-center">
+            {/* LOGO + DESCRIPTION */}
+            <div className="logo-section">
+              <img src={Logo} alt="Logo" className="footer-logo" />
+              <p className="footer-desc">
+                Exploring creativity and innovation through technology & building impactful digital experiences.
+              </p>
+            </div>
 
-                {/* Navigation Links */}
-                <div className="footer-nav-container">
-                  <Nav className="footer-nav">
-                    {links.map((link, index) => (
-                      <Nav.Link
-                        as={NavLink}
-                        to={link.path}
-                        key={index}
-                        className="footer-link"
-                      >
-                        {link.label}
-                      </Nav.Link>
-                    ))}
-                  </Nav>
-                </div>
+            {/* NAVIGATION LINKS */}
+            <div className="footer-nav-container">
+              <Nav className="footer-nav">
+                {links.map((link, index) => (
+                  <Nav.Link
+                    as={NavLink}
+                    to={link.path}
+                    key={index}
+                    className="footer-link"
+                  >
+                    {link.label}
+                  </Nav.Link>
+                ))}
+              </Nav>
+            </div>
 
-                {/* COPYRIGHT SECTION */}
-                <div className="footer-bottom">
-                  <p>
-                    <MdCopyright
-                      style={{
-                        fontSize: "26px",
-                        marginRight: "5px",
-                        verticalAlign: "middle",
-                        marginTop: '-5px'
-                      }}
-                    />
-                    {year}{" "}
-                    <span className="footer-author">{author}</span> — {slogan}
-                  </p>
-                </div>
-              </Col>
-            </Row>
+            {/* COPYRIGHT SECTION */}
+            <div className="footer-bottom">
+              <p>
+                <MdCopyright
+                  style={{
+                    fontSize: "20px",
+                    marginRight: "5px",
+                    verticalAlign: "middle",
+                  }}
+                />
+                {year} <span className="footer-author">{author}</span> — {slogan}
+              </p>
+            </div>
           </Container>
         </div>
       </div>
