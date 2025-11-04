@@ -7,6 +7,7 @@ import experienceReducer from "./experienceSlice";
 import projectsReducer from "./projectsSlice"; 
 import devReducer from "./devSlice"; 
 import contactReducer from "./contactSlice";
+import footerReducer from './footerSlice';
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
     projects: projectsReducer, 
     dev: devReducer, 
     contact: contactReducer,
+    footer: footerReducer,
   },
 });
