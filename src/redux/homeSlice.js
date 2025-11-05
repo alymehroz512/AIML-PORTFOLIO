@@ -1,29 +1,48 @@
-// src/redux/homeSlice.js
+// src/features/homeSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "Syed Faraz Mehdi",
-  titles: [
-    "AI & ML Engineer",
-    "Deep Learning Enthusiast",
-    "Data Science Problem Solver",
-  ],
   tagline: "Building Intelligent Systems with AI",
-  descriptionFull:
-    "I’m an AI & ML Engineer passionate about leveraging data and algorithms to build smart, human-centered systems. With expertise in Python, TensorFlow, PyTorch, and data science tools, I develop machine learning models that solve real-world problems. My work focuses on predictive analytics, computer vision, and natural language processing. I enjoy transforming raw data into intelligent insights and creating seamless integrations between AI models and production-ready applications.",
-  descriptionShort:
-    "I’m an AI & ML Engineer passionate about building intelligent and human-centered systems using data-driven algorithms. I focus on turning ideas into smart, efficient, and scalable AI solutions.",
+  // NOTE: 'icon' values must match actual named exports from @heroicons/react/24/outline
+  professionalSummary: [
+    {
+      title: "Senior Python Developer",
+      description:
+        "Highly accomplished and detail-oriented Senior Python Developer with over a decade of proven expertise in architecting, developing, and optimizing dynamic web applications and enterprise-grade APIs.",
+      icon: "CpuChipIcon",
+    },
+    {
+      title: "Backend Engineering & Frameworks",
+      description:
+        "Experienced in leveraging Python frameworks such as Django, Flask, and FastAPI to build high-performance backend systems, ensuring scalability, modularity, and maintainability.",
+      icon: "CodeBracketIcon",
+    },
+    {
+      title: "Cloud & DevOps Integration",
+      description:
+        "Deep understanding of cloud infrastructure on AWS, Azure, and GCP, coupled with DevOps tools like Docker, Kubernetes, Jenkins, and CI/CD pipelines to streamline development workflows.",
+      icon: "CloudIcon",
+    },
+    {
+      title: "Database & Data Management",
+      description:
+        "Proficient in managing complex databases including PostgreSQL, MySQL, and MongoDB, focusing on data integrity, performance optimization, and scalability.",
+      icon: "ServerIcon",
+    },
+    {
+      title: "Collaboration & Leadership",
+      description:
+        "Renowned for writing efficient, well-structured code, adhering to agile practices, mentoring teams, and delivering secure, user-focused software solutions.",
+      icon: "UsersIcon",
+    },
+  ],
 };
 
 const homeSlice = createSlice({
   name: "home",
   initialState,
-  reducers: {
-    updateDescription: (state, action) => {
-      state.descriptionFull = action.payload;
-    },
-  },
+  reducers: {},
 });
 
-export const { updateDescription } = homeSlice.actions;
 export default homeSlice.reducer;
