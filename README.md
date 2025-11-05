@@ -170,6 +170,6 @@ If you plan a larger refactor, open an issue first to discuss the approach.
 - License: No LICENSE file is included in this repository. If you want others to reuse or contribute, add a LICENSE (for example MIT or Apache-2.0).
 - Author / Contact:
   - GitHub: https://github.com/alymehroz512
-  - Site title: Syed Faraz Mehdi
+  - Gmail: alimehroz621@gmail.com
 
 ---
