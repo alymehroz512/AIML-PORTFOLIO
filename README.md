@@ -1,156 +1,175 @@
-```markdown
 # AIML-PORTFOLIO
 
-A modern React + Vite portfolio template for Syed Faraz Mehdi (AIML portfolio). Built with Vite and React, this repository is set up to serve a responsive single-page portfolio site with common tooling for development, linting, and building for production.
+A modern, single-page portfolio template built with React and Vite for Syed Faraz Mehdi (AIML portfolio). This repository provides a responsive, developer-friendly starting point for hosting an AIML-focused personal portfolio, with common tooling for development, linting, and production builds.
 
 ---
 
 ## Table of contents
 
-- [Project overview](#project-overview)
-- [Built with](#built-with)
-- [Getting started](#getting-started)
+- [About](#about)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Quick start](#quick-start)
 - [Available scripts](#available-scripts)
 - [Project structure](#project-structure)
-- [Notes & special configuration](#notes--special-configuration)
+- [Configuration notes](#configuration-notes)
 - [Contributing](#contributing)
 - [License & contact](#license--contact)
 
 ---
 
-## Project overview
+## About
 
-This repository contains a Vite + React application intended as a personal portfolio. The app uses common React ecosystem tools and libraries to provide a polished developer experience and UI building blocks. The HTML entry (index.html) references an icon and mounts the React app at the `#root` element using `src/main.jsx`.
+This repository contains a Vite + React application configured as a personal portfolio site. The app mounts at the `#root` element (see `src/main.jsx`) and is intended to present projects, visualizations, and biographical information in a clean, responsive layout.
 
-Title in index.html: "Syed Faraz Mehdi"
+The HTML title is set to "Syed Faraz Mehdi" and the project includes an icon referenced from `src/assets/WebIcon.svg`.
 
 ---
 
-## Built with
+## Features
 
-Core technologies and notable dependencies (from package.json):
+- Responsive single-page React application
+- Routing with react-router-dom
+- State management with Redux Toolkit
+- Form handling via react-hook-form
+- Charts and visualizations (Recharts)
+- Reusable UI components (Bootstrap + react-bootstrap)
+- Icon libraries included (react-icons, Heroicons, Tabler, Iconify)
+- Linting configured with ESLint for consistent code style
 
-- React (react, react-dom)
-- Vite (bundler / dev server)
+---
+
+## Tech stack
+
+Core technologies and notable dependencies:
+
+- React, React DOM
+- Vite (dev server / bundler)
 - @vitejs/plugin-react
-- Redux Toolkit (for state management): @reduxjs/toolkit, react-redux
-- Routing: react-router-dom
-- UI / styling:
-  - Bootstrap, react-bootstrap
-  - react-icons, @heroicons/react, @tabler/icons-react
-- Utility & data:
-  - axios
-  - react-hook-form
-  - react-type-animation
-  - recharts
-- Dev tooling:
-  - eslint and related plugins
-  - @types/react, @types/react-dom (for type definitions)
+- Redux Toolkit (@reduxjs/toolkit, react-redux)
+- react-router-dom
+- Bootstrap, react-bootstrap
+- react-icons, @heroicons/react, @tabler/icons-react
+- axios
+- react-hook-form
+- react-type-animation
+- recharts
+- ESLint (and related plugins)
+- TypeScript type definitions (@types/react, @types/react-dom)
 
-Note: package.json contains an override mapping for `vite` to `npm:rolldown-vite@7.1.14`.
+Note: package.json contains an override mapping that replaces `vite` with `npm:rolldown-vite@7.1.14`. See the "Configuration notes" section below.
 
 ---
 
-## Getting started
+## Quick start
 
 Prerequisites
 
-- Node.js and npm installed (recommend LTS). Exact minimum Node version is not pinned in this repo; use a recent LTS release.
+- Node.js (recommended: current LTS)
+- npm
 
-Quick start
+Clone and run locally
 
-1. Clone the repository
-   git clone https://github.com/alymehroz512/AIML-PORTFOLIO.git
-2. Change into the project directory
-   cd AIML-PORTFOLIO
-3. Install dependencies
-   npm install
-4. Start the development server
-   npm run dev
-5. Open the app in your browser (Vite typically serves at http://localhost:5173)
+```bash
+git clone https://github.com/alymehroz512/AIML-PORTFOLIO.git
+cd AIML-PORTFOLIO
+npm install
+npm run dev
+```
 
-Build for production
+Open your browser to the address Vite prints (commonly http://localhost:5173).
 
-- Create a production build:
-  npm run build
+Build and preview production bundle
 
-- Preview the production build locally:
-  npm run preview
+```bash
+# build for production
+npm run build
 
-Linting
+# locally preview the production build
+npm run preview
+```
 
-- Run ESLint across the project:
-  npm run lint
+Run linters
+
+```bash
+npm run lint
+```
 
 ---
 
 ## Available scripts
 
-Extracted from package.json:
+As defined in package.json:
 
-- dev: vite
-- build: vite build
-- preview: vite preview
-- lint: eslint .
+- npm run dev — start Vite dev server
+- npm run build — build production assets
+- npm run preview — preview production build locally
+- npm run lint — run ESLint across the project
 
-Run any script with:
-  npm run <script>
+Run scripts with `npm run <script>`.
 
 ---
 
 ## Project structure
 
 Top-level files
-- index.html — HTML entry with `<div id="root"></div>` and an icon reference.
-- package.json / package-lock.json — dependencies & scripts.
-- vite.config.js — Vite configuration that loads the React plugin.
+- index.html — HTML entry, includes `<div id="root"></div>` and an icon reference
+- package.json / package-lock.json — dependencies and npm scripts
+- vite.config.js — Vite configuration
+- eslint.config.js — linting configuration
 - .gitignore
-- eslint.config.js
 
-Important directories
-- public/
-  - vite.svg — example asset included in public.
+Key directories
+- public/ — static public assets
 - src/
-  - main.jsx — application entry (mounts React app).
-  - App.jsx — main React component (application root).
-  - index.css — global CSS.
-  - App.css — (present, currently empty).
-  - assets/ — static assets (icons, images). index.html references `/src/assets/WebIcon.svg`.
-  - components/ — UI components (directory present).
-  - pages/ — route pages (directory present).
-  - redux/ — Redux slices / store (directory present).
-  - styles/ — shared styles (directory present).
+  - main.jsx — application entrypoint (mounts the React app)
+  - App.jsx — application root component
+  - index.css, App.css — global and app styles
+  - assets/ — images, icons (index.html references `/src/assets/WebIcon.svg`)
+  - components/ — reusable UI components
+  - pages/ — route pages
+  - redux/ — Redux store and slices
+  - styles/ — shared styles
 
-Note: Several directories are present as structure placeholders; open them to see components and implementation details.
+Some directories serve as structure placeholders — open them to review component implementations.
 
 ---
 
-## Notes & special configuration
+## Configuration notes & gotchas
 
-- Vite override: package.json overrides `vite` to use `rolldown-vite`. If you encounter tooling/compatibility issues, check the override entry in package.json.
-- index.html includes an external Iconify script for icon usage:
+- Vite override: package.json maps `vite` to `npm:rolldown-vite@7.1.14`. If you see compatibility or unexpected behavior from Vite, check the overrides section in package.json and consider reverting to the official Vite package if necessary.
+- Iconify: index.html includes an external Iconify script:
+  ```html
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-- The project was scaffolded from a Vite React template (README contains template text). This README replaces and expands on the template content.
+  ```
+  Remove or pin this if you require offline builds or stricter CSP.
+- Title: index.html title is "Syed Faraz Mehdi".
+- Type definitions: the repo includes @types packages where necessary for tooling; the project itself is JavaScript (React) with optional TypeScript types installed.
 
 ---
 
 ## Contributing
 
-Contributions are welcome. Basic guidelines:
+Contributions are welcome. Suggested workflow:
 
-- Open an issue describing the desired change or bug.
-- Create a feature branch: git checkout -b feat/your-feature
-- Commit clearly and open a Pull Request with a descriptive title and summary.
+1. Open an issue describing the feature or bug you want to address.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feat/your-feature
+   ```
+3. Make clear, atomic commits and push your branch.
+4. Open a Pull Request with a descriptive title and summary of changes.
+5. Include tests or manual verification steps for behavioral changes where applicable.
 
-Please add tests or manual-check steps for behavioral changes when possible.
+If you plan a larger refactor, open an issue first to discuss the approach.
 
 ---
 
 ## License & contact
 
-- License: No license file is present in the repository. If you intend others to reuse or contribute, add an appropriate LICENSE file (MIT, Apache-2.0, etc.).
+- License: No LICENSE file is included in this repository. If you want others to reuse or contribute, add a LICENSE (for example MIT or Apache-2.0).
 - Author / Contact:
   - GitHub: https://github.com/alymehroz512
-  - Title in site: Syed Faraz Mehdi
+  - Site title: Syed Faraz Mehdi
 
 ---
