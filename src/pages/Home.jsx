@@ -23,7 +23,7 @@ const Home = () => {
                 ...titles.flatMap((t) => [t, 1500]),
               ]}
               wrapper="span"
-              speed={50}
+              speed={30}
               repeat={Infinity}
               cursor={true}
             />
