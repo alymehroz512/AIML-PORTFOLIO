@@ -9,17 +9,14 @@ import {
 } from "@heroicons/react/24/outline";
 import { useSelector } from "react-redux";
 import "../styles/About.css";
-
 const iconMap = {
   CpuChipIcon: CpuChipIcon,
   ChartBarSquareIcon: ChartBarSquareIcon,
   BeakerIcon: BeakerIcon,
   ChartPieIcon: ChartPieIcon,
 };
-
 const About = () => {
   const { hero, intro, sections } = useSelector((state) => state.about);
-
   return (
     <>
       {/* 🔹 Hero Section */}
@@ -31,7 +28,6 @@ const About = () => {
           </Col>
         </div>
       </Container>
-
       {/* 🔹 Accordion Section */}
       <section className="about-accordion-section">
         <Container>
@@ -39,9 +35,7 @@ const About = () => {
             <h2 className="text-uppercase">{intro.heading}</h2>
             <p className="accordion-intro-text">{intro.description}</p>
           </div>
-
           <hr className="pulse-line" />
-
           <Accordion defaultActiveKey="0" className="about-accordion">
             {sections.map((item) => {
               const IconComponent = iconMap[item.icon];
@@ -70,5 +64,4 @@ const About = () => {
     </>
   );
 };
-
 export default About;

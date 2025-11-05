@@ -1,6 +1,5 @@
 // src/redux/aboutSlice.js
 import { createSlice } from "@reduxjs/toolkit";
-
 const initialState = {
   hero: {
     title: "About Me",
@@ -9,7 +8,7 @@ const initialState = {
   intro: {
     heading: "What Drives My Work",
     description:
-      "My focus lies in creating intelligent systems that learn, adapt, and evolve — merging innovation with real-world problem-solving.",
+      "With over 10 years in AI/ML engineering, I specialize in building scalable, intelligent solutions that drive innovation and solve real-world challenges.",
   },
   sections: [
     {
@@ -17,11 +16,11 @@ const initialState = {
       title: "Artificial Intelligence",
       icon: "CpuChipIcon",
       description:
-        "Designing intelligent systems that perceive, reason, and make data-driven decisions. AI bridges human-like intelligence with computational precision.",
+        "Experienced and results-driven Python Developer with over 10 years of hands-on experience in designing, developing, and deploying scalable web applications and APIs with a focus on AI/ML integration.",
       highlights: [
-        "10+ years developing intelligent automation systems across finance, healthcare, and retail.",
-        "Architected AI-driven decision systems improving accuracy and efficiency by 40%.",
-        "Integrated ethical AI principles ensuring fairness and transparency in deployed models.",
+        "Seasoned AI/ML Engineer - Over 10 years of experience in designing, developing, and deploying scalable machine learning models and full-stack applications using Python, TensorFlow, PyTorch, and Scikit-learn.",
+        "Leadership and Collaboration - Led teams at Lenovo and Inoxoft, mentoring juniors, conducting code reviews, and translating business needs into technical solutions with agile methodologies.",
+        "Education and Certifications - MS in Computer Science from University of Bridgeport; certified in AWS ML Specialty, Google Cloud ML Engineer, Azure AI Engineer, CKA, and TensorFlow Developer.",
       ],
     },
     {
@@ -29,11 +28,11 @@ const initialState = {
       title: "Machine Learning",
       icon: "ChartBarSquareIcon",
       description:
-        "Leveraging algorithms that learn from data to predict, classify, and improve automatically over time — forming the core of automation and predictive analytics.",
+        "Building robust ML systems with backend and frontend integration, MLOps practices, and cloud deployment for efficient, scalable solutions.",
       highlights: [
-        "8+ years of experience implementing predictive models using Python, scikit-learn, and XGBoost.",
-        "Optimized ML pipelines for scalability and MLOps deployment on AWS and Azure.",
-        "Collaborated cross-functionally with data engineers and analysts to improve model performance.",
+        "Full-Stack Expertise - Proficient in backend frameworks like Django, Flask, and FastAPI, paired with frontend technologies including React.js, Angular, and Vue.js, to build AI-integrated user platforms.",
+        "MLOps Specialist - Implemented end-to-end ML pipelines with Docker, Kubernetes, MLflow, Kubeflow, and CI/CD tools like Jenkins and GitHub Actions for efficient model deployment and monitoring.",
+        "Cloud and Big Data Pro - Hands-on with AWS (SageMaker, Lambda), Azure ML, GCP (Vertex AI), Apache Spark, Kafka, Airflow, and Databricks for scalable data processing and cloud-native solutions.",
       ],
     },
     {
@@ -41,11 +40,10 @@ const initialState = {
       title: "Deep Learning",
       icon: "BeakerIcon",
       description:
-        "Using neural networks to model complex data patterns, powering breakthroughs in computer vision and natural language processing.",
+        "Specializing in advanced neural architectures and infrastructure for computer vision, NLP, and high-performance AI systems.",
       highlights: [
-        "Developed CNN and Transformer-based architectures for image and NLP tasks.",
-        "10 years of hands-on experience with TensorFlow, PyTorch, and OpenCV.",
-        "Led deep learning projects in autonomous systems and facial recognition.",
+        "Database and DevOps Savvy - Designed optimized systems using PostgreSQL, MongoDB, Redis, and Elasticsearch; expertise in Git, Terraform, Prometheus, and Grafana for robust infrastructure.",
+        "Deep Learning Focus - Specialized in neural networks, CNNs, RNNs, LSTMs, Transformers, BERT, computer vision, and NLP using Hugging Face and Keras.",
       ],
     },
     {
@@ -53,16 +51,14 @@ const initialState = {
       title: "Data Science",
       icon: "ChartPieIcon",
       description:
-        "Extracting actionable insights from data using Python, TensorFlow, and PyTorch — driving smarter decisions through analytics and visualization.",
+        "Driving insights, security, and innovation through data analysis, optimization, and cutting-edge project development.",
       highlights: [
-        "Built analytical dashboards and visualization systems using Power BI and Plotly.",
-        "9+ years of experience in data preprocessing, feature engineering, and EDA.",
-        "Delivered data-driven strategies that reduced operational costs by up to 30%.",
+        "Security and Performance - Ensured secure applications with OAuth2, JWT, RBAC, and OWASP practices; optimized APIs for low latency, high throughput, and real-time processing with Kafka and Flink.",
+        "Innovative Projects - Developed distributed training platforms with PyTorch/Kubernetes, real-time ML pipelines handling 50k+ events/sec, and AutoML systems reducing development time by 80%.",
       ],
     },
   ],
 };
-
 const aboutSlice = createSlice({
   name: "about",
   initialState,
@@ -72,6 +68,5 @@ const aboutSlice = createSlice({
     },
   },
 });
-
 export const { updateIntro } = aboutSlice.actions;
 export default aboutSlice.reducer;

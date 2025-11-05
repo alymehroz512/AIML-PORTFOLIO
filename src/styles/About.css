@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-
 :root {
   --accent: #f5f5f5;
   --text: #ffffff;
   --accordion-bg: #1e2f36;
   --accordion-active: #0a2730;
 }
-
 /* 🌌 Hero Section */
 .about-hero-section {
   background-image: url("../assets/AboutHero.jpg");
@@ -22,7 +20,6 @@
   justify-content: flex-start;
   padding: 8vh 5vw;
 }
-
 .about-hero-section::before {
   content: "";
   position: absolute;
@@ -33,7 +30,6 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-
 .about-inner-container {
   width: 100%;
   position: relative;
@@ -41,7 +37,6 @@
   display: flex;
   justify-content: flex-start;
 }
-
 /* 🧠 About Content */
 .about-content {
   width: 100%;
@@ -53,7 +48,6 @@
   align-items: flex-start;
   justify-content: center;
 }
-
 .about-subheading {
   color: #07fbff;
   font-size: 30px;
@@ -62,7 +56,6 @@
   letter-spacing: 2px;
   text-shadow: 0px 0px 6px rgba(245, 245, 245, 0.25);
 }
-
 .about-description {
   color: #ffffff;
   font-size: 65px;
@@ -72,7 +65,6 @@
   text-transform: capitalize;
   text-shadow: 0px 0px 6px rgba(245, 245, 245, 0.25);
 }
-
 /* 🧩 Accordion Section */
 .about-accordion-section {
   background-color: #ffffff;
@@ -80,19 +72,16 @@
   font-family: "Quicksand", sans-serif;
   text-align: center;
 }
-
 .accordion-intro {
   max-width: 800px;
   margin: 0 auto 40px;
 }
-
 .accordion-intro h2 {
   font-size: 2.8rem;
   color: #234756;
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
-
 /* ✅ Intro paragraph same as accordion body */
 .accordion-intro-text {
   font-size: 1.25rem; /* match accordion body text */
@@ -101,7 +90,6 @@
   text-align: center;
   margin: 0 auto;
 }
-
 /* 🔹 Pulse Animated Divider */
 .pulse-line {
   border: none;
@@ -111,7 +99,6 @@
   background-color: #234756;
   animation: pulse 1.8s infinite ease-in-out;
 }
-
 @keyframes pulse {
   0% {
     transform: scaleX(1);
@@ -126,14 +113,12 @@
     opacity: 0.9;
   }
 }
-
 /* Accordion Styling */
 .about-accordion .accordion-item {
   border: none;
   margin-bottom: 10px;
   background: transparent;
 }
-
 .about-accordion .accordion-button {
   background-color: var(--accordion-bg);
   color: #ffffff;
@@ -150,7 +135,6 @@
   border-radius: 0 !important;
   cursor: none;
 }
-
 /* Remove border-radius on first & last */
 .about-accordion .accordion-item:first-of-type .accordion-button {
   border-top-left-radius: 0 !important;
@@ -160,46 +144,38 @@
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
-
 /* White chevron icons */
 .about-accordion .accordion-button::after {
   filter: brightness(0) invert(1);
   opacity: 1;
 }
-
 .about-accordion .accordion-button:hover {
   background-color: var(--accordion-active);
   color: var(--accent);
 }
-
 .about-accordion .accordion-button:not(.collapsed) {
   color: var(--accent);
   background-color: var(--accordion-active);
 }
-
 .about-accordion .accordion-body {
   background-color: #f7f9fa;
   color: #333;
   padding: 28px 34px;
   text-align: left;
 }
-
 .accordion-body {
     border-bottom: 2px solid #234756;
 }
-
 .accordion-body-text {
   font-size: 1.25rem;
   line-height: 1.8;
   color: #222;
 }
-
 .accordion-icon {
   width: 28px;
   height: 28px;
   color: var(--accent);
 }
-
 /* 📱 Responsive */
 @media (max-width: 1024px) {
   .about-description {
@@ -212,73 +188,59 @@
     width: 95%;
   }
 }
-
 @media (max-width: 769px) {
   .about-content {
     padding: 40px 20px;
   }
-
   .about-description {
     font-size: 40px;
   }
-
   .about-subheading {
     font-size: 18px;
   }
-
   .about-accordion .accordion-button {
     font-size: 1.2rem;
     padding: 20px;
   }
-
   .accordion-body-text,
   .accordion-intro-text {
     font-size: 1.1rem;
   }
 }
-
 @media (max-width: 425px) {
   .about-description {
     font-size: 32px;
     line-height: 1.3;
   }
-
   .about-subheading {
     font-size: 16px;
   }
-
   .accordion-intro h2 {
     font-size: 1.6rem;
   }
-
   .accordion-body-text,
   .accordion-intro-text {
     font-size: 1rem;
   }
-
   .pulse-line {
     width: 100%;
   }
 }
-
 @media (max-width: 375px) {
   .accordion-body-text,
   .accordion-intro-text {
     font-size: 0.95rem;
   }
 }
-
 @media (max-width: 320px) {
   .about-description {
     font-size: 28px;
   }
-
   .accordion-body-text,
   .accordion-intro-text {
     font-size: 0.9rem;
   }
 }
-
 /* 🌟 Accordion Experience List */
 .accordion-list {
   margin-top: 15px;
@@ -288,17 +250,14 @@
   font-size: 1.1rem;
   line-height: 1.7;
 }
-
 .accordion-list li {
   margin-bottom: 8px;
   text-align: left;
 }
-
 /* ✨ Animation for Accordion Body */
 .accordion-body-animate {
   animation: fadeSlideIn 0.6s ease forwards;
 }
-
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
